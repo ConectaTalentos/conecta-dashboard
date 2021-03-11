@@ -119,6 +119,7 @@ interface HeadCell {
 
 const headCells: HeadCell[] = [
   { id: 'name', numeric: false, disablePadding: true, label: 'Nome' },
+  { id: 'email', numeric: false, disablePadding: true, label: 'E-mail' },
   { id: 'genero', numeric: false, disablePadding: true, label: 'Gênero' },
   { id: 'bairro', numeric: false, disablePadding: true, label: 'Bairro' },
   { id: 'escolaridade', numeric: false, disablePadding: true, label: 'Escolaridade' },
@@ -393,6 +394,7 @@ export default function Home() {
                       <TableCell component="th" id={labelId} scope="row" padding="none">
                         {row.name}
                       </TableCell>
+                      <TableCell >{row.email || 'Não informado'}</TableCell>
                       <TableCell >{row.genero || 'Não informado'}</TableCell>
                       <TableCell >{row.bairro || 'Não informado'}</TableCell>
                       <TableCell >{row.escolaridade || 'Não informado'}</TableCell>
